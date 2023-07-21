@@ -31,14 +31,11 @@ function createPolicyholder(req, res) {
 
 function getPolicyholderById(req, res) {
   // Implementação do desafio:
-    const policyholderId = req.params.policyholderId;
-    const policyholder = findPolicyholderById(policyholderId);
-  
-    if (!policyholder) {
-      return res.status(404).json();
-    }
-    return res.json(policyholder);
-  }
+  const newPolicyholder = matchedData(req);
+  const policyholders = findPolicyholderById(newPolicyholder.policyholderId);
+
+  !policyholders ? res.status(404).json() : res.json(policyholders)
+}
 
 module.exports = {
   getAllPolicyholders,
