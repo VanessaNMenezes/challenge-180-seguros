@@ -4,12 +4,17 @@
   "description": "Desafio Laboratoria 180 Seguros",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "test": "jest --verbose --coverage"
   },
   "author": "180 Seguross",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "express-validator": "^7.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3"
   }
 }
